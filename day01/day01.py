@@ -1,4 +1,4 @@
-# part 1
+# part one
 def total_count_from_file(file_name):
     password_count = 0
     position = 50
@@ -14,8 +14,8 @@ def total_count_from_file(file_name):
     return password_count
 
 
-# part 2
-def total_count_from_file_part_2(file_name):
+# part two
+def total_count_from_file_part_two(file_name):
     password_count = 0
     position = 50
     with open(file_name) as f:
@@ -47,8 +47,8 @@ if __name__ == "__main__":
     total = total_count_from_file('day01\\input.txt')
     print(f'Password: {total}')
 
-    total = total_count_from_file_part_2('day01\\input_example.txt')
+    total = total_count_from_file_part_two('day01\\input_example.txt')
     print(f'Password: {total}')
 
-    total = total_count_from_file_part_2('day01\\input.txt')
+    total = total_count_from_file_part_two('day01\\input.txt')
     print(f'Password: {total}')

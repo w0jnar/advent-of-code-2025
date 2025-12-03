@@ -1,5 +1,5 @@
 # part one
-def total_count_from_file(file_name):
+def total_count_from_file(file_name: str) -> int:
     password_count = 0
     position = 50
     with open(file_name) as f:
@@ -15,7 +15,7 @@ def total_count_from_file(file_name):
 
 
 # part two
-def total_count_from_file_part_two(file_name):
+def total_count_from_file_part_two(file_name: str) -> int:
     password_count = 0
     position = 50
     with open(file_name) as f:

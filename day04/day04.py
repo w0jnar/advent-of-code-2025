@@ -1,5 +1,4 @@
-# part one
-def total_count_from_file(file_name: str) -> int:
+def build_file_map(file_name: str) -> list[list[str]]:
     file_map = []
     with open(file_name) as f:
         for line in f:
@@ -7,6 +6,12 @@ def total_count_from_file(file_name: str) -> int:
                 file_map.append(list('.' * (len(line) + 1)))
             file_map.append(list(f'.{line[0:-1]}.'))
     file_map.append(file_map[0])
+    return file_map
+
+
+# part one
+def total_count_from_file(file_name: str) -> int:
+    file_map = build_file_map(file_name)
     total = 0
     for i, line in enumerate(file_map):
         for j, char in enumerate(line):
@@ -17,13 +22,7 @@ def total_count_from_file(file_name: str) -> int:
 
 # part two
 def total_count_from_file_part_two(file_name: str) -> int:
-    file_map = []
-    with open(file_name) as f:
-        for line in f:
-            if len(file_map) == 0:
-                file_map.append(list('.' * (len(line) + 1)))
-            file_map.append(list(f'.{line[0:-1]}.'))
-    file_map.append(file_map[0])
+    file_map = build_file_map(file_name)
     total = 0
     rolls_to_be_removed = []
     while True:

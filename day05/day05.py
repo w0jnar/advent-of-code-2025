@@ -39,14 +39,14 @@ def total_count_from_file_part_two(file_name: str) -> int:
 
 
 if __name__ == "__main__":
-    total = total_count_from_file('day05\\input_example.txt')
-    print(f'Total: {total}')
+    total = total_count_from_file("day05\\input_example.txt")
+    print(f"Total: {total}")
 
-    total = total_count_from_file('day05\\input.txt')
-    print(f'Total: {total}')
+    total = total_count_from_file("day05\\input.txt")
+    print(f"Total: {total}")
 
-    total = total_count_from_file_part_two('day05\\input_example.txt')
-    print(f'Total: {total}')
+    total = total_count_from_file_part_two("day05\\input_example.txt")
+    print(f"Total: {total}")
 
-    total = total_count_from_file_part_two('day05\\input.txt')
-    print(f'Total: {total}')
+    total = total_count_from_file_part_two("day05\\input.txt")
+    print(f"Total: {total}")

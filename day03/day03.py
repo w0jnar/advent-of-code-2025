@@ -24,7 +24,7 @@ def total_count_from_file(file_name: str, is_part_two: bool = False) -> int:
 
 
 def find_next_max_value(line: str, start_index: int, end_index: int) -> tuple[str, int]:
-    max = '0'
+    max = "0"
     index = -1
     for i in range(start_index, end_index):
         num = line[i]
@@ -34,7 +34,7 @@ def find_next_max_value(line: str, start_index: int, end_index: int) -> tuple[st
         elif (num > max):
             max = num
             index = i
-        if (max == '9'):
+        if (max == "9"):
             break
     return max, index
 
@@ -48,18 +48,18 @@ def process_line(line: str, combinations: int) -> int:
         step -= 1
         index += 1
         max_list.append(new_max)
-    return int(''.join(max_list))
+    return int("".join(max_list))
 
 
 if __name__ == "__main__":
-    total = total_count_from_file('day03\\input_example.txt')
-    print(f'Total: {total}')
+    total = total_count_from_file("day03\\input_example.txt")
+    print(f"Total: {total}")
 
-    total = total_count_from_file('day03\\input.txt')
-    print(f'Total: {total}')
+    total = total_count_from_file("day03\\input.txt")
+    print(f"Total: {total}")
 
-    total = total_count_from_file('day03\\input_example.txt', True)
-    print(f'Total: {total}')
+    total = total_count_from_file("day03\\input_example.txt", True)
+    print(f"Total: {total}")
 
-    total = total_count_from_file('day03\\input.txt', True)
-    print(f'Total: {total}')
+    total = total_count_from_file("day03\\input.txt", True)
+    print(f"Total: {total}")

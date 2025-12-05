@@ -5,7 +5,7 @@ def total_count_from_file(file_name: str) -> int:
     with open(file_name) as f:
         for line in f:
             direction, number_of_rotations = line[0], int(line[1:-1])
-            if direction == 'L':
+            if direction == "L":
                 position = (position - number_of_rotations) % 100
             else:
                 position = (position + number_of_rotations) % 100
@@ -21,7 +21,7 @@ def total_count_from_file_part_two(file_name: str) -> int:
     with open(file_name) as f:
         for line in f:
             direction, number_of_rotations = line[0], int(line[1:-1])
-            if direction == 'L':
+            if direction == "L":
                 was_position_positive = position > 0
                 position -= number_of_rotations
                 is_position_negative = position < 0
@@ -36,19 +36,19 @@ def total_count_from_file_part_two(file_name: str) -> int:
                 while position > 99:
                     position -= 100
                     password_count += 1
-            # print(f'{direction} {number_of_rotations} {position} {password_count}')
+            # print(f"{direction} {number_of_rotations} {position} {password_count}")
     return password_count
 
 
 if __name__ == "__main__":
-    total = total_count_from_file('day01\\input_example.txt')
-    print(f'Password: {total}')
+    total = total_count_from_file("day01\\input_example.txt")
+    print(f"Password: {total}")
 
-    total = total_count_from_file('day01\\input.txt')
-    print(f'Password: {total}')
+    total = total_count_from_file("day01\\input.txt")
+    print(f"Password: {total}")
 
-    total = total_count_from_file_part_two('day01\\input_example.txt')
-    print(f'Password: {total}')
+    total = total_count_from_file_part_two("day01\\input_example.txt")
+    print(f"Password: {total}")
 
-    total = total_count_from_file_part_two('day01\\input.txt')
-    print(f'Password: {total}')
+    total = total_count_from_file_part_two("day01\\input.txt")
+    print(f"Password: {total}")

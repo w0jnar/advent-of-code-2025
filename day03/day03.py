@@ -10,7 +10,7 @@ def total_count_from_file(file_name: str, is_part_two: bool = False) -> int:
     file_list = []
     with open(file_name) as f:
         for line in f:
-            file_list.append(line[0:-1])
+            file_list.append(line[:-1])
     futures_list = []
     pool = concurrent.futures.InterpreterPoolExecutor()
     for line in file_list:

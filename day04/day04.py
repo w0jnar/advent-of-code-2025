@@ -4,7 +4,7 @@ def build_file_map(file_name: str) -> list[list[str]]:
         for line in f:
             if len(file_map) == 0:
                 file_map.append(list("." * (len(line) + 1)))
-            file_map.append(list(f".{line[0:-1]}."))
+            file_map.append(list(f".{line[:-1]}."))
     file_map.append(file_map[0])
     return file_map
 
